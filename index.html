@@ -1,1 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pixels & Pines</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    :root {
+      --forest: #2d4a2d;
+      --sage:   #6b8f71;
+      --sand:   #e8dcc8;
+      --ocean:  #3a7ca5;
+      --foam:   #f4f1eb;
+      --dark:   #1a1a1a;
+    }
+
+    body {
+      font-family: 'Georgia', serif;
+      background: var(--foam);
+      color: var(--dark);
+    }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+      filter: brightness(0.55);
+    }
+
+    .hero-content {
+      position: relative;
+      text-align: center;
+      color: #fff;
+      padding: 0 1.5rem;
+      max-width: 780px;
+    }
+
+    .hero-eyebrow {
+      font-family: 'Courier New', monospace;
+      font-size: 0.85rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--sand);
+      margin-bottom: 1rem;
+    }
+
+    .hero-title {
+      font-size: clamp(3rem, 8vw, 6rem);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-title span {
+      color: var(--sand);
+    }
+
+    .hero-tagline {
+      font-size: clamp(1rem, 2.2vw, 1.25rem);
+      line-height: 1.7;
+      color: rgba(255,255,255,0.88);
+      font-style: italic;
+    }
+
+    .hero-tagline em {
+      font-style: normal;
+      color: var(--sand);
+      font-weight: bold;
+    }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      color: rgba(255,255,255,0.6);
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      animation: bounce 2s infinite;
+    }
+
+    .scroll-hint svg { opacity: 0.6; }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50%       { transform: translateX(-50%) translateY(6px); }
+    }
+
+    /* ── ABOUT STRIP ── */
+    .about {
+      background: var(--forest);
+      color: var(--foam);
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+
+    .about h2 {
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      margin-bottom: 1.5rem;
+      color: var(--sand);
+    }
+
+    .about p {
+      max-width: 680px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.85;
+      color: rgba(244,241,235,0.88);
+    }
+
+    .about p strong {
+      color: var(--sand);
+    }
+
+    /* ── SECTION CARDS ── */
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 0;
+    }
+
+    .pillar {
+      padding: 4rem 2.5rem;
+      text-align: center;
+      border-right: 1px solid rgba(0,0,0,0.08);
+    }
+
+    .pillar:last-child { border-right: none; }
+
+    .pillar:nth-child(1) { background: var(--sand); }
+    .pillar:nth-child(2) { background: var(--foam); }
+    .pillar:nth-child(3) { background: var(--sage); color: #fff; }
+
+    .pillar-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .pillar h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.75rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .pillar p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      opacity: 0.85;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark);
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.85rem;
+      font-family: 'Courier New', monospace;
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img class="hero-img" src="SurfFall.jpg" alt="Wiping out on a wave — the learning never stops" />
+    <div class="hero-content">
+      <p class="hero-eyebrow">Welcome to</p>
+      <h1 class="hero-title">Pixels <span>&</span> Pines</h1>
+      <p class="hero-tagline">
+        A collection of my work experiences, personal projects, and ventures into the outdoors.
+        Across it all, I enjoy getting myself into many different hobbies,
+        <em>constantly failing and learning</em>,
+        and being a <em>jack of all trades and master of none</em>.
+      </p>
+    </div>
+    <div class="scroll-hint">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 5v14M5 12l7 7 7-7"/>
+      </svg>
+      scroll
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about">
+    <h2>The Philosophy</h2>
+    <p>
+      I believe the best way to grow is to be <strong>perpetually uncomfortable</strong>.
+      Whether I'm paddling out, shipping code, or hiking into the trees, the process is the same —
+      show up, make mistakes, and keep going. This site is a record of that ongoing experiment.
+    </p>
+  </section>
+
+  <!-- PILLARS -->
+  <div class="pillars">
+    <div class="pillar">
+      <div class="pillar-icon">💻</div>
+      <h3>Work &amp; Projects</h3>
+      <p>Professional experiences, side projects, and the code that keeps me up at night.</p>
+    </div>
+    <div class="pillar">
+      <div class="pillar-icon">🌲</div>
+      <h3>Outdoors</h3>
+      <p>Surf sessions, trail runs, and anything else that gets me away from a screen.</p>
+    </div>
+    <div class="pillar">
+      <div class="pillar-icon">📸</div>
+      <h3>Pixels</h3>
+      <p>Photography, creative projects, and moments worth remembering.</p>
+    </div>
+  </div>
+
+  <footer>
+    © 2026 Pixels &amp; Pines — still learning, always will be.
+  </footer>
+
+</body>
+</html>
