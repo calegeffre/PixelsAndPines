@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Educational Resources — Pixels & Pines</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --forest: #2d4a2d;
+      --sage:   #6b8f71;
+      --sand:   #e8dcc8;
+      --ocean:  #3a7ca5;
+      --foam:   #f4f1eb;
+      --dark:   #1a1a1a;
+    }
+    body {
+      font-family: 'Georgia', serif;
+      background: var(--foam);
+      color: var(--dark);
+      min-height: 100vh;
+      padding: 0 0 4rem;
+    }
+    nav {
+      background: var(--forest);
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    nav a {
+      font-family: 'Courier New', monospace;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--sand);
+      text-decoration: none;
+      border-bottom: 1px solid var(--sand);
+      padding-bottom: 2px;
+    }
+    nav a:hover { opacity: 0.7; }
+    .page-header {
+      background: var(--forest);
+      color: var(--foam);
+      text-align: center;
+      padding: 3rem 1.5rem 4rem;
+    }
+    .page-header h1 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      color: var(--sand);
+      margin-bottom: 0.75rem;
+    }
+    .page-header p {
+      font-size: 1.05rem;
+      color: rgba(244,241,235,0.8);
+      max-width: 520px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+    .content {
+      max-width: 860px;
+      margin: -2rem auto 0;
+      padding: 0 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      overflow: hidden;
+    }
+    .card-header {
+      padding: 1.25rem 1.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      border-bottom: 1px solid var(--sand);
+    }
+    .card-header span { font-size: 1.5rem; }
+    .card-header h2 {
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--forest);
+    }
+    .link-list { list-style: none; }
+    .link-list li {
+      border-bottom: 1px solid rgba(232,220,200,0.5);
+    }
+    .link-list li:last-child { border-bottom: none; }
+    .link-list a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.75rem;
+      text-decoration: none;
+      color: var(--dark);
+      font-size: 0.98rem;
+      transition: background 0.15s;
+    }
+    .link-list a:hover {
+      background: var(--foam);
+    }
+    .link-list a .link-label { font-weight: 600; }
+    .link-list a .link-meta {
+      font-size: 0.8rem;
+      font-family: 'Courier New', monospace;
+      color: var(--sage);
+      letter-spacing: 0.05em;
+    }
+    .link-list a .arrow { color: var(--sage); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <nav><a href="index.html">← Back to Pixels &amp; Pines</a></nav>
+
+  <div class="page-header">
+    <h1>📚 Educational Resources</h1>
+    <p>Curated links, videos, and flashcards to sharpen coding and interview skills.</p>
+  </div>
+
+  <div class="content">
+
+    <!-- CODING PREP -->
+    <div class="card">
+      <div class="card-header">
+        <span>💻</span>
+        <h2>Coding Prep</h2>
+      </div>
+      <ul class="link-list">
+        <li>
+          <a href="https://www.designgurus.io/blind75" target="_blank" rel="noopener">
+            <span class="link-label">Blind 75</span>
+            <span class="link-meta">75 must-know LeetCode problems &nbsp;↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://leetcode.com" target="_blank" rel="noopener">
+            <span class="link-label">LeetCode</span>
+            <span class="link-meta">Practice problems &nbsp;↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://blog.algomaster.io/p/15-leetcode-patterns" target="_blank" rel="noopener">
+            <span class="link-label">15 LeetCode Patterns</span>
+            <span class="link-meta">Article &nbsp;↗</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- HELPFUL VIDEOS -->
+    <div class="card">
+      <div class="card-header">
+        <span>🎬</span>
+        <h2>Helpful Videos</h2>
+      </div>
+      <ul class="link-list">
+        <li>
+          <a href="https://www.youtube.com/watch?v=DjYZk8nrXVY" target="_blank" rel="noopener">
+            <span class="link-label">LeetCode was HARD until I Learned these 15 Patterns</span>
+            <span class="link-meta">YouTube &nbsp;↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=rop0W4QDOUI" target="_blank" rel="noopener">
+            <span class="link-label">Maze Solving — Computerphile</span>
+            <span class="link-meta">YouTube &nbsp;↗</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=LPZh9BOjkQs" target="_blank" rel="noopener">
+            <span class="link-label">Large Language Models Explained Briefly</span>
+            <span class="link-meta">YouTube &nbsp;↗</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- FLASHCARDS -->
+    <div class="card">
+      <div class="card-header">
+        <span>🃏</span>
+        <h2>Flashcards</h2>
+      </div>
+      <ul class="link-list">
+        <li>
+          <a href="https://quizlet.com/1094887390/software-interview-prep-flash-cards/?i=6uvtta&x=1jqt" target="_blank" rel="noopener">
+            <span class="link-label">SWE Interview Prep Flashcards</span>
+            <span class="link-meta">Quizlet &nbsp;↗</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div><!-- /content -->
+</body>
+</html>
